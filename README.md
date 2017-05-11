@@ -8,40 +8,18 @@ creates an easteregg
 *pregenerated egg shells that the pattern changes. 
 */
 
-public class EasterEgg {
+public class Main {
 
-   private char chrOutput = '*';
-   private static int intEggCount = 1;
-    public EasterEgg(){
-    UserInput();
-    intEggCount++;
-    }
-    
-    private void UserInput(){
-    Scanner objInput = new Scanner(System.in);
-    System.out.println("What character would you like inside egg number " + intEggCount + "?");
-    setSymbol(objInput.next().charAt(0));
-    }
-    
-    public int EggCounter(){
-    return intEggCount - 1;
-    }
-    
-    private char getSymbol(){
-    return chrOutput;
-    }
-    
-    private void setSymbol(char pchrOutput){
-    chrOutput = pchrOutput;
-    }
-    
-    public String toString(){
-    
-    return 
-    (" /" + getSymbol() + getSymbol() + "\\ \n" +
-    "/" + getSymbol()  + getSymbol()  + getSymbol()  + getSymbol()  + "\\ \n" +
-    "|" + getSymbol() + getSymbol() + getSymbol() + getSymbol() + "|  \n" +
-    "\\____/ \n\n");
-    
-    }
-}
+   public static void main(String[] args) {
+   
+      EasterEgg objEasterEgg = new EasterEgg();
+      
+         Basket objBasket = new Basket();
+            
+          objBasket.add(new EasterEgg());
+          objBasket.add(new EasterEgg());
+          objBasket.add(new EasterEgg());
+            
+          System.out.println(objBasket);
+          System.out.println("Number of Eggs: " + objEasterEgg.EggCounter());
+    }}
